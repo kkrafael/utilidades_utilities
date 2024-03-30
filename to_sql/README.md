@@ -1,7 +1,7 @@
 # to_sql
 ### Descrição
-Script criado com o intuito de ler aquivos csv e xlsx e armazena-los no PostgreSQL, afim de facilitar as análises.
-O banco de dados onde fiz os testes foi criado no https://www.elephantsql.com/ de graça, de 20 MB.
+Script criado com o intuito de ler arquivos .csv e .xlsx e armazená-los no PostgreSQL, a fim de facilitar as análises.
+O banco de dados onde fiz os testes foi criado no https://www.elephantsql.com/, gratuito e de 20 MB.
 ### Instalação
 Para a utilização do script, será necessário instalar e importar essas três bibliotecas.
 ````
@@ -10,7 +10,7 @@ pip install pandas
 pip install sqlalchemy
 ````
 ### Uso
-Após instalar e importar as bibliotecas, será necessário anexar os parâmetros as seguintes variáveis: 
+Após instalar e importar as bibliotecas, será necessário anexar os parâmetros às seguintes variáveis: 
 ````
 database = ""
 user = ""
@@ -18,14 +18,14 @@ host= ""
 password = ""
 port = 1234
 ````
-Em seguida, necessário colocar o caminho de onde está esse arquivo em sua máquina em "caminho", o nome do arquivo em "nome" e o formato (.csv ou .xlsx) em "formato" .
+Em seguida, é necessário colocar o caminho de onde está esse arquivo em sua máquina na variável "caminho", o nome do arquivo na variável "nome" e o formato (.csv ou .xlsx) na variável "formato".
 ````
 caminho = 'path'
 nome = 'name'
 formato = 'format'
 ````
-Por fim executar essa ultima celula, ela irá criar conexão com o banco e subir o arquivo do seu computador para o sql.
-Lembrando que nome do arquivo em seu pc, será o mesmo da tabela no banco.
+Por fim, ao executar a célula abaixo, ela irá criar conexão com o banco e subir o arquivo do seu computador para o SQL.
+Lembrando que o nome do arquivo em sua máquina será o mesmo da tabela no banco.
 ````
 with create_engine(f'postgresql://{user}:{password}@{host}:{port}/{database}').connect() as connection:
     df = pd.read_excel(f'{caminho}{nome}{formato}')
