@@ -1,7 +1,7 @@
 # to_sql
 ### Descrição
 Script criado com o intuito de ler aquivos csv e xlsx e armazena-los no PostgreSQL, afim de facilitar as análises.
-O banco de dados onde fiz os teste foi criado no https://www.elephantsql.com/ de graça, de 20 MB.
+O banco de dados onde fiz os testes foi criado no https://www.elephantsql.com/ de graça, de 20 MB.
 ### Instalação
 Para a utilização do script, será necessário instalar e importar essas três bibliotecas.
 ````
