@@ -8,6 +8,8 @@ Para a utilização do script, será necessário instalar e importar essas três
 pip install psycopg2
 pip install pandas
 pip install sqlalchemy
+import pandas as pd
+from sqlalchemy import create_engine
 ````
 ### Uso
 Após instalar e importar as bibliotecas, será necessário anexar os parâmetros às seguintes variáveis: 
