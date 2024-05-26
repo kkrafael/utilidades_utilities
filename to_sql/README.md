@@ -1,4 +1,4 @@
-# to_sql
+# to sql
 ### Descrição
 Script criado com o intuito de ler arquivos .csv e .xlsx e armazená-los no PostgreSQL, a fim de facilitar as análises.
 O banco de dados onde fiz os testes foi criado no https://www.elephantsql.com/, gratuito e de 20 MB.
