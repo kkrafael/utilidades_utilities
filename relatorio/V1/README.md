@@ -13,16 +13,16 @@ today = date.today(
 Em seguida, precisamos criar variáveis de cada projeto que estamos analisando, e adicionar os processo que falharam, caso haja algum processo que tenha falhado.
 
 ````
-processo_a = ''
-processo_b = ''
-processo_c = ''
+projeto_a = ''
+projeto_b = ''
+projeto_c = ''
 ````
 Nessa etapa, caso exista mais projetos, será necessário fazer a seguinte adição "processo_xyz = ''.
 
 Imediatamente após isso, teremos que ajustara condição se o projeto terá um ✅ ou se receberá o nome dos processos que falharam. 
 ````
-#processo_a
-if processo_a != '':
+#projeto_a
+if projeto_a != '':
     ok_a = ''
     n_a = '\n'
     falha_a = 'Processos que falharam: '
@@ -36,7 +36,8 @@ _Else_ ocorrerá caso aquele projeto não receba nem um processo, portanto não 
 
 Logo após isso, teremos a etapa que terá uma mensagem no final do relatório, sinalizando que esses processos que falharam ja estão sendo ajustados.
 ````
-if processo_a != '' or processo_b != '' or processo_c != '':
+# valida erro
+if projeto_a != '' or projeto_b != '' or projeto_c != '':
     error = 'Ja estamos analisando o(s) erro(s)'
 else:
     error = ''
@@ -49,11 +50,11 @@ Bom dia,
 Relatório do dia {today}
 
 projeto a {ok_a}
-{falha_a} {processo_a} {n_a}
+{falha_a} {projeto_a} {n_a}
 projeto b {ok_b}
-{falha_b} {processo_b} {n_b}
+{falha_b} {projeto_b} {n_b}
 projeto c {ok_c}
-{falha_c} {processo_c} {n_c}
+{falha_c} {projeto_c} {n_c}
 
 {error}
 
